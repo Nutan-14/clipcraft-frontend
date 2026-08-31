@@ -1,0 +1,11 @@
+/* Application layout: shell/header/sidebar/workspace */
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+}
+
+.main-content {
+  min-width: 0;
+  padding: 24px;
+}
