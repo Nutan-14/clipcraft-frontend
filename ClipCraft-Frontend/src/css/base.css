@@ -1,0 +1,19 @@
+/* Global reset, typography and CSS variables */
+:root {
+  --bg: #0b1020;
+  --surface: #121a2a;
+  --surface-2: #182238;
+  --text: #f5f7ff;
+  --muted: #9aa6bf;
+  --primary: #7c3aed;
+  --border: rgba(255, 255, 255, 0.08);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
