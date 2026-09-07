@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ClipCraft - Analytics History</title>
+
+    <link rel="stylesheet" href="analytics-history.css">
+</head>
+
+<body>
+
+<div class="analytics-page">
+
+    <!-- PAGE HEADER -->
+    <header class="page-header">
+
+        <div>
+            <span class="page-label">CLIPCRAFT / ANALYTICS</span>
+
+            <h1>Analytics History</h1>
+
+            <p>
+                Track your video editing activity and analytics history.
+            </p>
+        </div>
+
+        <button class="export-btn" id="exportBtn">
+            Export Report
+        </button>
+
+    </header>
+
+
+    <!-- SUMMARY CARDS -->
+    <section class="summary-grid">
+
+        <div class="summary-card">
+
+            <div class="card-icon">▣</div>
+
+            <div>
+                <span>Total Projects</span>
+                <h2 id="totalProjects">0</h2>
+            </div>
+
+        </div>
+
+
+        <div class="summary-card">
+
+            <div class="card-icon">◷</div>
+
+            <div>
+                <span>Total Editing Time</span>
+                <h2 id="totalTime">0h 0m</h2>
+            </div>
+
+        </div>
+
+
+        <div class="summary-card">
+
+            <div class="card-icon">▶</div>
+
+            <div>
+                <span>Videos Edited</span>
+                <h2 id="videosEdited">0</h2>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FILTER -->
+    <section class="filter-section">
+
+        <div>
+            <h2>Analytics Overview</h2>
+            <p>View your editing activity over time.</p>
+        </div>
+
+        <select id="dateFilter">
+
+            <option value="all">All Time</option>
+            <option value="7">Last 7 Days</option>
+            <option value="30">Last 30 Days</option>
+
+        </select>
+
+    </section>
+
+
+    <!-- CHART -->
+    <section class="chart-card">
+
+        <div class="section-heading">
+
+            <div>
+                <h2>Editing Activity</h2>
+                <p>Projects edited during the selected period.</p>
+            </div>
+
+        </div>
+
+        <div class="chart">
+
+            <div class="y-axis">
+                <span>10</span>
+                <span>8</span>
+                <span>6</span>
+                <span>4</span>
+                <span>2</span>
+                <span>0</span>
+            </div>
+
+            <div class="chart-area">
+
+                <div class="grid-lines">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div
+                    class="bars"
+                    id="chartBars"
+                ></div>
+
+                <div
+                    class="chart-labels"
+                    id="chartLabels"
+                ></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- RECENT ACTIVITY -->
+    <section class="activity-section">
+
+        <div class="section-title">
+
+            <div>
+                <h2>Recent Activity</h2>
+                <p>Your latest editing activities.</p>
+            </div>
+
+        </div>
+
+        <div
+            class="activity-list"
+            id="activityList"
+        ></div>
+
+    </section>
+
+
+    <!-- HISTORY -->
+    <section class="history-section">
+
+        <div class="section-title">
+
+            <div>
+                <h2>History</h2>
+                <p>Previous projects and analytics.</p>
+            </div>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search project..."
+            >
+
+        </div>
+
+
+        <!-- DESKTOP TABLE -->
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>PROJECT</th>
+                        <th>DATE</th>
+                        <th>DURATION</th>
+                        <th>TYPE</th>
+                        <th>STATUS</th>
+                        <th>ACTION</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="historyTable"></tbody>
+
+            </table>
+
+        </div>
+
+
+        <!-- MOBILE CARDS -->
+        <div
+            class="mobile-history"
+            id="mobileHistory"
+        ></div>
+
+    </section>
+
+
+    <!-- EMPTY STATE -->
+    <div
+        class="empty-state"
+        id="emptyState"
+    >
+        No analytics history found.
+    </div>
+
+</div>
+
+
+<script src="analytics-history.js"></script>
+
+</body>
+</html>
